@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+ --Bright-Yellow: hsl(71, 73%, 54%);
+
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    line-height: 1.5;
+    font-family: 'Karla', sans-serif;
+   
+}
+h1{
+    color:var(--Cyan);
+    padding:1rem 0px;
+    font-size: 1.8rem;
+}
+h2{
+    color:var(--Bright-Yellow);
+    margin-bottom: 1rem;
+}
+
+span{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+main{
+    width: 800px;
+    height:75vh;
+    display: grid;
+    grid-template-columns: repeat(2,400px);
+    grid-template-rows: 37.5vh 37.5vh;
+    margin-bottom: 1rem;
+    box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+}
+main section{
+    padding-left:2.5rem;
+}
+.section1{
+    grid-column: 1/-1;
+    height: 37.5vh;
+    text-align: start;
+    background-color: white;
+    padding-top: 1rem;
+    border-radius: 5px;
+}
+.section1 p{
+    color:var(--Grayish-Blue);
+    
+}
+.section2{
+   grid-column: 1 / 2;
+    background-color: var(--Cyan);
+    padding: 2.5rem;
+    color:var(--Light-Gray);
+    border-radius: 5px;
+}
+.section3{
+   grid-column: 2 / -1;
+    background-color: hsl(179, 62%, 57%);
+    padding:1.5rem 8.5rem 1.5rem 2.5rem;
+    color:var(--Light-Gray);
+    border-radius: 5px;
+}
+.section3 h3{
+    margin-bottom: 1rem;
+}
+button{
+    width:300px;
+    background-color: var(--Bright-Yellow);
+    border-radius: 5px;
+    padding: 0.8rem 0px;
+    margin-top: 1rem;
+    color:var(--Light-Gray);
+    border:2px solid var(--Bright-Yellow);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    box-shadow: 10px 10px 31px 0px rgba(0,0,0,0.75);
+}
+/*for mobile phones*/
+
+@media(max-width:375px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+    width:350px;
+    grid-template-rows:repeat(3,300px);
+   grid-template-columns: 350px;
+}
+.section1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 100%;
+    justify-items: start;
+}
+.section2{
+   grid-row: 2/3;
+   grid-column: 1/2;
+}
+.section3{
+   grid-row: 3/-1;
+   grid-column: 1/2;
+}
+}
